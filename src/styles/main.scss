@@ -9,3 +9,34 @@ body {
 
   box-sizing: border-box;
 }
+
+@font-face {
+  font-family: "Inter Variable";
+  src: url("@assets/fonts/Inter.ttf");
+}
+
+// :root等价于html
+:root {
+  // 浏览器字体大小默认为1rem等于16px
+  font-size: calc(
+    1rem + 0.5vw
+  ); // 根据窗口宽度平滑缩放字体大小，例如宽度 500px 则字体大小为 16 + (500 / 100 * 0.5) = 18.5px
+
+  font-family: "Inter Variable";
+
+  --font-size-base: 1rem;
+  --font-size-biggish: 1.75rem;
+  --font-size-big: 2.25rem;
+}
+
+.font-size\:base {
+  font-size: var(--font-size-base) !important;
+}
+
+.font-size\:biggish {
+  font-size: var(--font-size-biggish) !important;
+}
+
+.font-size\:big {
+  font-size: var(--font-size-big) !important;
+}

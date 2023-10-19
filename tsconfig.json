@@ -9,7 +9,13 @@
 
     "moduleResolution": "Node", // 使用 Node.js 的模块解析策略
     "esModuleInterop": true, // 启用 ES 模块与 CommonJS 模块的互操作性
-    "allowSyntheticDefaultImports": true // 允许合成默认导入语法
+    "allowSyntheticDefaultImports": true, // 允许合成默认导入语法
+
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": ["./src/*"],
+      "@assets/*": ["./src/assets/*"]
+    }
   },
 
   "include": ["./src/"], // 编译器包含的源代码目录
